@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="exercises.js"></script>
+  <style>
+    form {
+      border: 2px solid black;
+      padding: 20px;
+      margin: 10px 0;
+    }
+
+    .form-headline{
+      margin-top: 0;
+    }
+
+    .form-container {
+      margin: 10px 0;
+    }
+
+    button {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      color: white;
+      background: green;
+      outline: none;
+    }
+
+    .hide-student-form {
+      display: none;
+    }
+
+  </style>
+</head>
+
+<body>
+  <button id='count-schedules'>Count staff schedules</button>
+  <ul id='count-ui'></ul>
+
+  <form action="" id="staff-form">
+    <h4 class="form-headline">Add Staff</h4>
+    <div class="form-container">
+      <label for="email">Email:</label>
+      <input type="text" name="email" id="email">
+    </div>
+    <div class="form-container">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name">
+    </div>
+    <button id="add-staff">Submit</button>
+  </form>
+
+  <button id="add-schedule">Add a schedule form</button>
+  <form action="" class="schedule-form">
+    <h4 class="form-headline">Schedule 1</h4>
+    <div class="form-container">
+      <label for="staff-select">Staff:</label>
+      <select name="staff_id" id="staff-select">
+      </select>
+    </div>
+    <div class="form-container">
+      <label for="date">Date:</label>
+      <input type="date" name="date" id="date">
+    </div>
+    <div class="form-container">
+      <label for="time">Time:</label>
+      <input type="time" name="time" id="time">
+    </div>
+  </form>
+  <button id="schedule-staff">Submit</button>
+
+  <form action="" id="booking-form">
+    <h4 class="form-headline">Book a schedule</h4>
+    <div class="form-container">
+      <label for="schedule-select">Select a schedule:</label>
+      <select name="id" id="schedule-select">
+      </select>
+    </div>
+    <div class="form-container">
+      <label for="booking-email">Email:</label>
+      <input type="text" name="student_email" id="booking-email">
+    </div>
+  </form>
+  <button id="book-schedule">Book</button>
+
+  <form action="" class='add-student hide-student-form' id="add-student-form">
+    <h4 class="form-headline">Add new student</h4>
+    <div class="form-container">
+      <label>Email:
+        <input type="text" name="email">
+      </label>
+    </div>
+    <div class="form-container">
+      <label>Name:
+      <input type="text" name="name">
+      </label>
+    </div>
+     <div class="form-container">
+      <label>Booking Sequence:
+      <input type="text" name="booking_sequence" value="">
+      </label>
+    </div>
+  </form>
+  <button class='add-student hide-student-form' id="add-student">Add</button>
+
+  <ul id='bookings-container'>
+  </ul>
+
+</body>
+
+</html>
